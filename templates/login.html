@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+
+    <title>用户注册</title>
+  </head>
+  <body>
+    <div class="container">
+      {{template "header"}}
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-4">
+          <p style="background-color: red">{{.}}</p>
+          <form method="post" action="/login">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >用户名称</label
+              >
+              <input
+                type="text"
+                name="username"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >用户密码</label
+              >
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">登录</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
